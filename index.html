@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>윤나라 | Product Operations Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container container--nav">
+      <div class="nav__logo">YUN NARA</div>
+      <div class="nav__links">
+        <a href="#hero" class="nav__link">Home</a>
+        <a href="#about" class="nav__link">About</a>
+        <a href="#contact" class="nav__cta">이력서 다운로드</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero reveal" id="hero">
+    <div class="container">
+      <p class="hero__eyebrow">Product Operations Manager</p>
+      <h1 class="hero__title">
+        숫자로 증명하는<br/>
+        프로덕트 기획자 윤나라입니다.
+      </h1>
+      <p class="hero__desc">
+        가설을 세우고, A/B 테스트로 실험하며, 운영 시스템으로 안착시킵니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- Profile & Career Timeline -->
+  <section class="toss-experience" id="about">
+    <div class="container--narrow">
+      
+      <!-- Intro Quote -->
+      <div class="toss-intro reveal">
+        <h2 class="toss-intro__headline">
+          <span class="text-blue">데이터</span>와 <span class="text-blue">운영 체계</span>를 바탕으로<br/>
+          비즈니스의 병목을 해결합니다.
+        </h2>
+        <p class="toss-intro__desc">
+          일 평균 120만 PV 커머스 지면의 성장 정체를 데이터로 진단하고, A/B 테스트로 성과를 입증해 왔습니다.<br/><br/>
+          편성표 CVR 14% 개선부터 오가닉 바이럴 이벤트 기획까지 — 기획의 성공이 일회성으로 끝나지 않도록 비즈니스 임팩트와 백오피스의 <strong>'운영 효율'</strong>을 종합적으로 설계합니다.
+        </p>
+      </div>
+
+      <!-- Toss UI Timeline -->
+      <div class="toss-timeline reveal">
+        <h3 class="toss-section-title">Experience</h3>
+        
+        <div class="tl-entry">
+          <div class="tl-entry__header">
+            <div class="tl-entry__title">현대홈쇼핑</div>
+            <div class="tl-entry__date">2021.03 — Present</div>
+          </div>
+          <div class="tl-entry__role">DT전략팀 / 프론트기획팀</div>
+          <p class="tl-entry__body">
+            고객 경험(UX) 개선 및 데이터 기반 프로덕트 운영을 담당하며, 연간 GMV 성장을 위한 퍼널 최적화 실험을 리드하고 있습니다.
+          </p>
+          <div class="toss-tags">
+            <span class="toss-tag">Product Ops</span>
+            <span class="toss-tag">Data Analysis</span>
+            <span class="toss-tag">A/B Testing</span>
+          </div>
+        </div>
+
+        <div class="tl-entry">
+          <div class="tl-entry__header">
+             <div class="tl-entry__title">경력 요약</div>
+          </div>
+          <div class="toss-card-grid">
+            <div class="toss-card">
+              <div class="toss-card__title">
+                <span class="text-blue">CVR 14%</span> 개선
+              </div>
+              <p class="toss-card__desc">가장 트래픽이 높은 핵심 지면(편성표 20.5%)의 유저 퍼널을 해체하고, 점진적인 A/B 테스트를 통해 개발 리소스 대비 최대 효율의 전환율 상승을 이끌어냈습니다.</p>
+            </div>
+            <div class="toss-card">
+              <div class="toss-card__title">
+                운영 효율 <span class="text-blue">60%</span> 향상
+              </div>
+              <p class="toss-card__desc">CMS 템플릿 구조화 및 AI 카피라이팅 가이드 시스템을 도입하여 콘텐츠 발행 리드타임을 5일에서 2일로 단축하고 운영 코스트를 제거했습니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Navigation -->
+  <div class="section-nav" id="section-nav">
+    <div class="section-nav__inner" style="justify-content: flex-start; gap: 20px; padding: 0 20px; overflow-x: auto; white-space: nowrap;">
+      <a href="#project-schedule" class="section-nav__link active" data-target="project-schedule">01 편성표</a>
+      <a href="#project-magazine" class="section-nav__link" data-target="project-magazine">02 매거진H</a>
+      <a href="#project-event" class="section-nav__link" data-target="project-event">03 카드공유</a>
+      <a href="#project-cafe" class="section-nav__link" data-target="project-cafe">04 H카페</a>
+      <a href="#project-monitoring" class="section-nav__link" data-target="project-monitoring">05 모니터링</a>
+      <a href="#project-ai" class="section-nav__link" data-target="project-ai">06 AI카피</a>
+    </div>
+  </div>
+
+  <!-- Projects List -->
+  
+  <!-- PROJECT 01: TV 편성표 -->
+  <section class="project" id="project-schedule">
+    <div class="container">
+      <div class="project__header reveal">
+        <p class="project__number">PROJECT 01</p>
+        <h2 class="project__title">TV 편성표 전면 개편</h2>
+        <p class="project__subtitle">40·60 핵심 고객 타깃의 라이프스타일 최적화로 CVR 14% 상승을 견인한 리디자인</p>
+      </div>
+
+      <div class="project__body">
+        <div class="reveal">
+          <div class="phone-mockup">
+            <div class="mockup-header">
+              <div style="padding: 12px 16px; font-weight: 700; font-size: 15px; display: flex; justify-content: space-between; align-items: center; background: #fff;">
+                <span>← 편성표</span>
+                <span style="font-size: 14px; color: #111;">홈</span>
+              </div>
+              <div class="mockup-tabs">
+                <div class="mockup-tab active" data-src="figma_tv_version_b_raw_1774963346198.png">모아보기(신규)</div>
+                <div class="mockup-tab" data-src="hmall_tv_schedule_1774963173091.png">TV쇼핑(기존)</div>
+              </div>
+            </div>
+            <div class="phone-mockup__screen">
+              <img src="figma_tv_version_b_raw_1774963346198.png" alt="TV 편성표" class="mockup-img">
+            </div>
+          </div>
+        </div>
+        <div class="project__text reveal">
+          <h3>성과 및 해결 전략</h3>
+          <div class="metrics">
+            <div class="metric"><span class="metric__value">+48%</span><span class="metric__label">방송 알림 클릭</span></div>
+            <div class="metric"><span class="metric__value">+14%</span><span class="metric__label">구매 전환율(CVR)</span></div>
+          </div>
+          <ul class="bullet-list">
+            <li><strong>모아보기 탭 신설</strong> — 다건 구매 유도 및 탐색 뎁스 축소</li>
+            <li><strong>정보 밀도 고도화</strong> — 한 화면 노출 방송 수 확장 (4개 → 10개)</li>
+            <li><strong>성능 최적화</strong> — 페이지 로딩 속도 0.7초 단축</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT 02: MAGAZINE H -->
+  <section class="project project--alt" id="project-magazine">
+    <div class="container">
+      <div class="project__header reveal">
+        <p class="project__number">PROJECT 02</p>
+        <h2 class="project__title">콘텐츠 매장, MAGAZINE H</h2>
+        <p class="project__subtitle">단순 상품 전시를 넘어 콘텐츠로 유저를 락인(Lock-in)하는 발견형 커머스</p>
+      </div>
+      <div class="project__body">
+        <div class="project__text reveal">
+          <h3>핵심 성과</h3>
+          <div class="metrics">
+            <div class="metric"><span class="metric__value">1.5배</span><span class="metric__label">체류 시간 증가</span></div>
+            <div class="metric"><span class="metric__value">24%</span><span class="metric__label">구매 기여 비중</span></div>
+          </div>
+          <ul class="bullet-list">
+            <li><strong>에디토리얼 설계</strong> — 설득 중심의 라이프스타일 큐레이션 도입</li>
+            <li><strong>인라인 브릿지</strong> — 독서 맥락을 유지하며 상품 구매 연결</li>
+            <li><strong>CMS 프로세스</strong> — 에디터 직접 발행 구조로 운영 코스트 60% 절감</li>
+          </ul>
+        </div>
+        <div class="reveal">
+          <div class="phone-mockup">
+            <div class="mockup-header">
+              <div style="padding: 12px 16px; font-weight: 700; font-size: 15px; display: flex; justify-content: space-between; align-items: center; background: #fff;">
+                <span>← 매거진H</span>
+                <span style="font-size: 14px; border: 1px solid #ddd; padding: 2px 6px; border-radius: 4px;">공유</span>
+              </div>
+              <div class="mockup-tabs">
+                <div class="mockup-tab active" data-src="hmall_magazine_h_1774963189787.png">추천(Home)</div>
+                <div class="mockup-tab" data-src="https://placehold.co/390x2000/F9FAFB/31343C?text=Magazine+Article+Detail">아티클뷰</div>
+              </div>
+            </div>
+            <div class="phone-mockup__screen">
+              <img src="hmall_magazine_h_1774963189787.png" alt="매거진H" class="mockup-img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT 03: 카드 공유 이벤트 -->
+  <section class="project" id="project-event">
+    <div class="container">
+      <div class="project__header reveal">
+        <p class="project__number">PROJECT 03</p>
+        <h2 class="project__title">카드 공유 바이럴 이벤트</h2>
+        <p class="project__subtitle">오가닉 유입 극대화를 위한 자발적 공유 메커니즘 설계</p>
+      </div>
+      <div class="project__body">
+        <div class="reveal">
+          <div class="phone-mockup">
+            <div class="mockup-header">
+              <div style="padding: 12px 16px; font-weight: 700; font-size: 15px; display: flex; justify-content: space-between; align-items: center; background: #fff3b0; border: none;">
+                <span style="color: #4a3f35;">← 이벤트</span>
+                <span style="font-size: 18px;">🏠</span>
+              </div>
+            </div>
+            <div class="phone-mockup__screen" style="padding-top: 50px;">
+              <!-- Clone UI Implementation for Event -->
+              <div style="background:#fcf9f2; width:100%; font-family:sans-serif;">
+                <div style="background:linear-gradient(135deg, #fff3b0, #ffde00); padding:30px 20px; border-radius:0 0 24px 24px;">
+                  <div style="font-weight:800; font-size:24px; color:#4a3f35;">SHARE CARD</div>
+                  <p style="font-size:12px; opacity:0.7;">나만의 카드를 만들어 선물하세요</p>
+                </div>
+                <div style="padding:20px; text-align:center;">
+                  <div style="width:100%; height:200px; background:linear-gradient(135deg, #ff9a9e, #fecfef); border-radius:20px; margin-bottom:20px; display:flex; align-items:center; justify-content:center; color:white; font-weight:700;">작성한 메시지 노출 영역</div>
+                  <button style="width:100%; padding:15px; background:#ff7b54; color:white; border:none; border-radius:12px; font-weight:700;">공유하고 혜택받기</button>
+                </div>
+                <div style="padding: 24px 20px;">
+                   <div style="font-weight: 700; margin-bottom: 12px;">기획전 상품 추천</div>
+                   <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                      <div style="height: 140px; background: #fff; border-radius: 12px; border: 1px solid #eee;"></div>
+                      <div style="height: 140px; background: #fff; border-radius: 12px; border: 1px solid #eee;"></div>
+                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project__text reveal">
+          <h3>바이럴 성과</h3>
+          <div class="metrics">
+            <div class="metric"><span class="metric__value">3.5만</span><span class="metric__label">일별 참여자</span></div>
+            <div class="metric"><span class="metric__value">0.8명</span><span class="metric__label">신규 유입 지수</span></div>
+          </div>
+          <ul class="bullet-list">
+            <li><strong>개인화 메시지</strong> — 참여자가 직접 만든 콘텐츠로 바이럴 거부감 제거</li>
+            <li><strong>Funnel 압축</strong> — 앱 웹뷰 딥링크로 이탈 구간 80% 단축</li>
+            <li><strong>넛지 설계</strong> — 실시간 랭킹 노출로 유저 경쟁 심리 자극</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT 04: H카페 커뮤니티 -->
+  <section class="project project--alt" id="project-cafe">
+    <div class="container">
+      <div class="project__header reveal">
+        <p class="project__number">PROJECT 04</p>
+        <h2 class="project__title">H카페 커뮤니티 리뉴얼</h2>
+        <p class="project__subtitle">목적형 쇼핑 이탈을 막는 습관 형성형 C2C 소셜 라운지</p>
+      </div>
+      <div class="project__body">
+        <div class="project__text reveal">
+          <h3>리텐션 성과</h3>
+          <div class="metrics">
+            <div class="metric"><span class="metric__value">+15.7%</span><span class="metric__label">MAU 상승</span></div>
+            <div class="metric"><span class="metric__value">+21%</span><span class="metric__label">알림 오픈율</span></div>
+          </div>
+          <ul class="bullet-list">
+            <li><strong>콜드스타트 해결</strong> — 글쓰기 템플릿화로 유저 게시글 작성 허들 제거</li>
+            <li><strong>자동화 연동</strong> — 라이브 방송 상품 실시간 연동 영역 구축</li>
+            <li><strong>소셜 루프</strong> — 좋아요/댓글 실시간 Push로 앱 재진입 유도</li>
+          </ul>
+        </div>
+        <div class="reveal">
+          <div class="phone-mockup">
+            <div class="mockup-header">
+              <div style="padding: 12px 16px; font-weight: 700; font-size: 15px; display: flex; justify-content: space-between; align-items: center; background: #fff;">
+                <span>← H카페</span>
+                <span style="font-size: 14px;">설정</span>
+              </div>
+              <div class="mockup-tabs">
+                <div class="mockup-tab active" data-src="figma_hcafe_tobe_really_final_1774963395316.png">커뮤니티(TOBE)</div>
+                <div class="mockup-tab" data-src="hmall_h_cafe_1774963204780.png">활동 피드(기존)</div>
+              </div>
+            </div>
+            <div class="phone-mockup__screen">
+              <img src="figma_hcafe_tobe_really_final_1774963395316.png" alt="H카페" class="mockup-img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT 05: 방송 모니터링 시스템 -->
+  <section class="project" id="project-monitoring">
+    <div class="container">
+      <div class="project__header reveal">
+        <p class="project__number">PROJECT 05</p>
+        <h2 class="project__title">방송 모니터링 시스템</h2>
+        <p class="project__subtitle">현장 가시성 확보를 위한 쇼호스트/상담사용 실시간 대시보드</p>
+      </div>
+      <div class="project__body">
+        <div class="reveal">
+          <div class="asset-viewer">
+            <div class="asset-viewer__desktop">
+              <img src="https://placehold.co/1200x800/F9FAFB/31343C?text=Dashboard+UI" alt="모니터링 대시보드" class="asset-viewer__img">
+            </div>
+            <p class="asset-viewer__caption">실시간 VOC 및 시청 지표 통합 뷰</p>
+          </div>
+        </div>
+        <div class="project__text reveal">
+          <h3>운영 효율 개선</h3>
+          <ul class="bullet-list">
+            <li><strong>데이터 통합</strong> — 산재된 지표를 하나의 화면으로 융합 및 실시간화</li>
+            <li><strong>현장 피드백</strong> — 상담 콜 및 채팅 데이터를 방송 현장에 즉각 전송</li>
+            <li><strong>협업 구조화</strong> — 백엔드 싱크 로직 설계로 부서 간 정보 비대칭 해소</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT 06: AI 카피라이팅 -->
+  <section class="project project--alt" id="project-ai">
+    <div class="container">
+      <div class="project__header reveal">
+        <p class="project__number">PROJECT 06</p>
+        <h2 class="project__title">AI 카피라이팅 시스템</h2>
+        <p class="project__subtitle">LLM 기반 마케팅 자동화로 150여 개 시나리오 카피 생성 가이드화</p>
+      </div>
+      <div class="project__body">
+        <div class="project__text reveal">
+          <h3>업무 생산성 성과</h3>
+          <div class="metrics">
+            <div class="metric"><span class="metric__value">-60%</span><span class="metric__label">기획 리드타임</span></div>
+          </div>
+          <ul class="bullet-list">
+            <li><strong>프롬프트 설계</strong> — 톤앤매너를 유지하는 AI 페르소나 최적화</li>
+            <li><strong>시나리오 템플릿</strong> — 150여 개 마케팅 케이스별 자동 로직 구축</li>
+            <li><strong>기회 코스트 제거</strong> — 반복적인 수동 카피라이팅 공수를 기술로 자동화</li>
+          </ul>
+        </div>
+        <div class="reveal">
+          <div class="asset-viewer">
+            <div class="asset-viewer__desktop">
+              <img src="https://placehold.co/1200x800/F9FAFB/31343C?text=AI+System+UI" alt="AI 카피라이팅" class="asset-viewer__img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta reveal" id="contact">
+    <div class="container">
+      <h2 class="cta__title">
+        운영의 한계를 아는 기획자가,<br/>
+        실현 가능한 최상의 고객 접점을 만듭니다.
+      </h2>
+      <p class="cta__desc">
+        '기획은 완벽하지만 운영팀에서 감당할 수 없는 서비스'를 지양합니다.<br/><br/>
+        백오피스 시스템부터 프론트엔드 A/B 테스트까지 프로덕트의 풀스택을 경험하며,<br/>복잡한 비즈니스 문제를 실행 가능한 단위로 분해하고 타협 없이 결과를 냅니다.
+      </p>
+      <button class="cta__button">이력서 원본 다운로드</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 Yun Nara. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
