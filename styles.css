@@ -18,10 +18,12 @@
   --c-gray-100: #f5f5f5;
   --c-gray-50: #fafafa;
   --c-white: #ffffff;
-  --c-accent: #2563eb;
-  --c-accent-light: #eff6ff;
+  --c-accent: #3182f6;
+  --c-blue: #3182f6;
+  --c-accent-light: #e8f3ff;
   --c-red: #ef4444;
   --c-green: #22c55e;
+
 
   /* Typography */
   --font-sans: 'Pretendard Variable', 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
@@ -82,10 +84,9 @@ ul { list-style: none; }
 }
 
 .grid-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 80px;
-  align-items: center;
 }
 
 .grid-2--reverse {
@@ -243,12 +244,12 @@ ul { list-style: none; }
 }
 
 .hero__title {
-  font-size: 64px;
+  font-size: 60px;
   font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: -0.035em;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
   color: var(--c-black);
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   max-width: 800px;
   word-break: keep-all;
 }
@@ -357,78 +358,206 @@ ul { list-style: none; }
 }
 
 /* ============================================
-   Phone Mockup (Clone App Experience)
+   Compare Cards (AS-IS / TO-BE)
+   Clean image containers — no phone mockup hacks
    ============================================ */
 
-.phone-mockup {
-  width: 100%;
-  max-width: 390px;
-  height: 800px; /* Fixed height for scrollable content */
-  background: #000;
-  border-radius: 54px;
-  border: 12px solid #1a1a1a;
+.project__visual {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.compare-card {
+  background: var(--c-white);
+  border-radius: 20px;
   overflow: hidden;
+  border: 1px solid var(--c-gray-200);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+  transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+}
+
+.compare-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+}
+
+.compare-card--wide {
+  width: 100%;
+}
+
+.compare-card__label {
+  padding: 12px 20px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--c-gray-500);
+  background: var(--c-gray-50);
+  border-bottom: 1px solid var(--c-gray-200);
+}
+
+.compare-card__label--tobe {
+  color: #3182f6;
+  background: #e8f3ff;
+  border-bottom-color: #bfdbfe;
+}
+
+/* ============================================
+   Mobile Mockup (Phone Frame)
+   For interactive scrollable demos
+   ============================================ */
+
+.mobile-mockup {
   position: relative;
-  box-shadow: 0 50px 100px -20px rgba(0,0,0,0.3);
+  width: 100%;
+  max-width: 380px; /* iPhone-like width */
+  height: 700px;
+  background: var(--c-white);
+  border-radius: 44px;
+  border: 12px solid #1a1a1a; /* Black phone bezel */
+  overflow: hidden;
+  box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25), 0 30px 60px -30px rgba(0, 0, 0, 0.3);
   margin: 0 auto;
 }
 
-.mockup-header {
-  position: absolute;
-  top: 0;
-  left: 0;
+.mobile-mockup__screen {
   width: 100%;
-  background: white;
-  z-index: 100;
-  border-bottom: 1px solid #f0f1f3;
-}
-
-.mockup-tabs {
-  display: flex;
-  padding: 8px 12px;
-  gap: 8px;
-  background: #fff;
-}
-
-.mockup-tab {
-  flex: 1;
-  padding: 10px 4px;
-  font-size: 13px;
-  font-weight: 600;
-  text-align: center;
-  border-radius: 8px;
-  cursor: pointer;
-  color: var(--c-gray-400);
-  background: var(--c-gray-50);
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.mockup-tab.active {
-  background: var(--c-blue);
-  color: white;
-  box-shadow: 0 4px 12px rgba(0, 107, 255, 0.2);
-}
-
-.phone-mockup__screen {
   height: 100%;
-  padding-top: 100px; /* Header space */
-  overflow-y: auto;
-  background: #f9fafb;
-  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background: #f8f9fa;
+  
+  /* Toss-style scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.1) transparent;
 }
 
-.phone-mockup__screen::-webkit-scrollbar {
+.mobile-mockup__screen::-webkit-scrollbar {
   width: 4px;
 }
 
-.phone-mockup__screen::-webkit-scrollbar-thumb {
-  background: rgba(0,0,0,0.1);
-  border-radius: 10px;
+.mobile-mockup__screen::-webkit-scrollbar-track {
+  background: transparent;
 }
 
-.mockup-img {
+.mobile-mockup__screen::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+}
+
+.mobile-mockup__screen img {
   width: 100%;
+  height: auto;
   display: block;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.compare-card__img {
+  width: 100%;
+  overflow: hidden;
+  background: #f8f9fa;
+}
+
+.compare-card__img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* project__body--reverse: no longer needed in single-column layout */
+
+/* ============================================
+   Research Section
+   ============================================ */
+
+.research-section {
+  margin-top: 20px;
+}
+
+.research-section__header {
+  margin-bottom: 40px;
+}
+
+.research-section__tag {
+  display: inline-block;
+  background: #e8f3ff;
+  color: #3182f6;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.research-section__title {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.3;
+  color: var(--c-black);
+}
+
+.research-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.research-card {
+  background: var(--c-white);
+  border-radius: 20px;
+  padding: 32px;
+  border: 1px solid var(--c-gray-200);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+  transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+}
+
+.research-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.research-card__number {
+  font-size: 32px;
+  font-weight: 800;
+  color: #3182f6;
+  opacity: 0.3;
+  margin-bottom: 12px;
+}
+
+.research-card h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--c-black);
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.research-card p {
+  font-size: 15px;
+  color: var(--c-gray-700);
+  line-height: 1.7;
+  word-break: keep-all;
+}
+
+.research-visual {
+  margin-top: 24px;
+}
+
+.research-visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .research-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ============================================
@@ -479,7 +608,7 @@ ul { list-style: none; }
 }
 
 .project__header {
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 
 .project__number {
@@ -492,10 +621,10 @@ ul { list-style: none; }
 }
 
 .project__title {
-  font-size: 48px;
+  font-size: 42px;
   font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1.2;
+  letter-spacing: -0.04em;
+  line-height: 1.3;
   color: var(--c-black);
   margin-bottom: 16px;
   word-break: keep-all;
@@ -508,18 +637,17 @@ ul { list-style: none; }
 }
 
 .project__body {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
 }
 
 .project__text h3 {
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.3;
-  margin-bottom: 20px;
+  letter-spacing: -0.03em;
+  line-height: 1.4;
+  margin-bottom: 16px;
   color: var(--c-black);
   word-break: keep-all;
 }
@@ -981,13 +1109,9 @@ ul { list-style: none; }
     font-size: 32px;
   }
 
-  .project__body {
-    grid-template-columns: 1fr;
-    gap: 48px;
-  }
+
 
   .grid-2 {
-    grid-template-columns: 1fr;
     gap: 48px;
   }
 
@@ -1062,17 +1186,9 @@ ul { list-style: none; }
     display: none;
   }
 
-  .project__body[style*="rtl"] {
-    direction: ltr;
-  }
 
-  .phone-mockup {
-    max-width: 320px;
-  }
 
-  .phone-mockup__screen {
-    height: 600px;
-  }
+
 }
 
 @media (max-width: 480px) {
@@ -1084,4 +1200,98 @@ ul { list-style: none; }
     flex-direction: column;
     gap: 24px;
   }
+}
+
+/* ============================================
+   Final Layout Override: Forced 1-Column Stack
+   (Final Fix for High-Fidelity Portfolio)
+   ============================================ */
+@media (min-width: 1px) {
+  .project__body, .grid-2 {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 60px !important;
+  }
+  .project__visual, .project__text {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .compare-card {
+    width: 100% !important;
+    margin-bottom: 40px !important;
+  }
+  .compare-card--tobe {
+    order: 2 !important;
+  }
+  .compare-card__img img {
+    height: auto !important;
+    width: 100% !important;
+    object-fit: contain !important;
+  }
+  .container, .container--narrow {
+    max-width: 850px !important;
+  }
+  .research-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ============================================
+   Mobile Mockup (Phone Frame)
+   For interactive scrollable demos
+   ============================================ */
+
+.mobile-mockup {
+  position: relative;
+  width: 100%;
+  max-width: 380px; /* iPhone-like width */
+  height: 700px;
+  background: var(--c-white);
+  border-radius: 44px;
+  border: 12px solid #1a1a1a; /* Black phone bezel */
+  overflow: hidden;
+  box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25), 0 30px 60px -30px rgba(0, 0, 0, 0.3);
+  margin: 40px auto;
+}
+
+.mobile-mockup__screen {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background: #f8f9fa;
+  
+  /* Toss-style scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.1) transparent;
+}
+
+.mobile-mockup__screen::-webkit-scrollbar {
+  width: 4px;
+}
+
+.mobile-mockup__screen::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.mobile-mockup__screen::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+}
+
+.mobile-mockup__screen img {
+  width: 100% !important;
+  height: auto !important;
+  display: block;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* Ensure long-scroll images aren't crushed */
+.project__visual--long .compare-card__img {
+  max-height: 800px;
+  overflow-y: auto;
+}
+
+.project__visual--long img {
+  height: auto !important;
 }

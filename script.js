@@ -18,13 +18,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── Section Nav Highlight ──
   const sectionNavLinks = document.querySelectorAll('.section-nav__link');
-  const projectSections = document.querySelectorAll('.project');
+  const allSections = document.querySelectorAll('.project, #research');
 
   function updateActiveNav() {
     let current = '';
-    projectSections.forEach(section => {
+    allSections.forEach(section => {
       const rect = section.getBoundingClientRect();
-      // If the section spans across the top 40% of viewport
       if (rect.top <= window.innerHeight * 0.4 && rect.bottom >= window.innerHeight * 0.4) {
         current = section.id;
       }
@@ -57,40 +56,5 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-
-  // ── Mockup Tab Switching (Clone App Experience) ──
-  const mockups = document.querySelectorAll('.phone-mockup');
-  mockups.forEach(mockup => {
-    const tabs = mockup.querySelectorAll('.mockup-tab');
-    const screenImg = mockup.querySelector('.mockup-img');
-    const screenContainer = mockup.querySelector('.phone-mockup__screen');
-
-    if (tabs.length > 0 && screenImg) {
-      tabs.forEach(tab => {
-        tab.addEventListener('click', (e) => {
-          e.preventDefault();
-          
-          // Remove active class from all tabs in THIS mockup only
-          tabs.forEach(t => t.classList.remove('active'));
-          // Add active class to clicked tab
-          tab.classList.add('active');
-
-          // Transition Image (Fade in/out feel if possible with CSS, here just direct src change)
-          const targetSrc = tab.getAttribute('data-src');
-          if (targetSrc) {
-            screenImg.style.opacity = '0.4'; // Quick visual feedback
-            setTimeout(() => {
-                screenImg.src = targetSrc;
-                screenImg.style.opacity = '1';
-                // Reset scroll for the new view
-                if (screenContainer) screenContainer.scrollTop = 0;
-            }, 50);
-          }
-        });
-      });
-    }
-  });
-
-
 
 });
