@@ -1286,9 +1286,15 @@ ul { list-style: none; }
   image-rendering: -webkit-optimize-contrast;
 }
 
-/* Ensure long-scroll images aren't crushed */
+/* Ensure long-scroll images aren't overwhelming */
+.project__visual--long .compare-card {
+  max-width: 540px; /* Limit width */
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .project__visual--long .compare-card__img {
-  max-height: 800px;
+  max-height: 640px; /* Limit height */
   overflow-y: auto;
 }
 
